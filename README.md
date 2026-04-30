@@ -7,6 +7,13 @@ A high-performance, Loom-native adapter for transforming internal payment instru
 - **Zero Boilerplate:** Utilizes Java Records for immutable data modeling.
 - **Logic-in-Template:** Uses Java 21 Text Blocks for high-speed XML generation without the overhead of heavy Marshalling libraries (JAXB).
 
+## Technical
+- Engine: Java 21 (Temurin) with Virtual Threads (Project Loom).
+- GC: Generational ZGC for low-latency financial processing.
+- Spec: ISO 20022 pacs.008.001.10 compliant.
+- Security: Non-root Docker execution & strict Input Validation.
+- Observability: Integrated Micrometer/Prometheus telemetry.
+
 ## 🛠️ Key Components
 - `IsoTransformer`: Maps internal DTOs to ISO-compliant Records.
 - `XmlGeneratorService`: Generates strict ISO 20022 XML messages.
